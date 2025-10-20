@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Mum!</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Mum 💚</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🌸 Happy Birthday, Mum! 💚</h1>
-    <p>You’re the heart of our family — may your day be as beautiful and peaceful as nature itself. 🌿💐</p>
+  <audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    <button onclick="playSong()">Play Song 🎵</button>
-    <audio id="song" src="https://www.w3schools.com/html/horse.mp3"></audio>
+  <div class="container">
+    <h1 class="title">💚 Happy Birthday Mum 💚</h1>
+
+    <p class="message">
+      To the most loving, selfless, and beautiful woman — you are our heart.  
+      Your smile lights up our days, your laughter fills our hearts,  
+      and your love holds our family together.  
+      You deserve the peace, joy, and beauty you’ve given us all. 💚
+    </p>
+
+    <div class="solo-photo">
+      <h2>🌸 Just You 🌸</h2>
+      <img src="img6.jpg" alt="Mum's photo" />
+    </div>
+
+    <div class="gallery">
+      <h2>💚 Family Moments 💚</h2>
+      <div class="photo-grid">
+        <img src="img1.jpg" alt="Mum and Precious" />
+        <img src="img2.jpg" alt="Mum and siblings 1" />
+        <img src="img3.jpg" alt="Mum and siblings 2" />
+        <img src="img4.jpg" alt="Mum and siblings 3" />
+        <img src="img5.jpg" alt="Mum and siblings 4" />
+      </div>
+    </div>
+
+    <div class="affirmations">
+      <h2>💫 From Our Hearts 💫</h2>
+      <ul>
+        <li>You are love in its purest form.</li>
+        <li>Your strength keeps us standing tall.</li>
+        <li>Your wisdom guides us every day.</li>
+        <li>Your laughter makes our home feel alive.</li>
+        <li>We are proud to be your children, Mum. 💚</li>
+      </ul>
+    </div>
+
+    <p class="footer">With all our love, <span>Precious & Family 💚</span></p>
   </div>
 
-  <div class="confetti"></div>
-
-  <script>
-    function playSong() {
-      const song = document.getElementById('song');
-      song.play();
-      alert("Enjoy your special day, Mum! 💚");
-    }
-
-    // Confetti animation
-    const confettiContainer = document.querySelector('.confetti');
-    for (let i = 0; i < 30; i++) {
-      const confetto = document.createElement('div');
-      confetto.classList.add('confetto');
-      confetto.style.left = Math.random() * 100 + 'vw';
-      confetto.style.animationDelay = Math.random() * 5 + 's';
-      confettiContainer.appendChild(confetto);
-    }
-  </script>
+  <div class="hearts">
+    <span>💚</span>
+    <span>💚</span>
+    <span>💚</span>
+    <span>💚</span>
+    <span>💚</span>
+  </div>
 </body>
 </html>
