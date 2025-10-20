@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Mum!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌸 Happy Birthday, Mum! 💚</h1>
+    <p>You’re the heart of our family — may your day be as beautiful and peaceful as nature itself. 🌿💐</p>
+
+    <button onclick="playSong()">Play Song 🎵</button>
+    <audio id="song" src="https://www.w3schools.com/html/horse.mp3"></audio>
+  </div>
+
+  <div class="confetti"></div>
+
+  <script>
+    function playSong() {
+      const song = document.getElementById('song');
+      song.play();
+      alert("Enjoy your special day, Mum! 💚");
+    }
+
+    // Confetti animation
+    const confettiContainer = document.querySelector('.confetti');
+    for (let i = 0; i < 30; i++) {
+      const confetto = document.createElement('div');
+      confetto.classList.add('confetto');
+      confetto.style.left = Math.random() * 100 + 'vw';
+      confetto.style.animationDelay = Math.random() * 5 + 's';
+      confettiContainer.appendChild(confetto);
+    }
+  </script>
+</body>
+</html>
