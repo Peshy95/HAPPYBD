@@ -3,32 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Mum 💚</title>
+  <title>💚 Happy Birthday Mum 💚</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Background Music -->
   <audio autoplay loop>
-    <source src="song.mp3" type="audio/mpeg">
+    <source src="song.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
+  <!-- Floating Hearts -->
+  <div class="floating-hearts">
+    💚💚💚💚💚
+  </div>
+
   <div class="container">
     <h1 class="title">💚 Happy Birthday Mum 💚</h1>
+    <p class="subtitle">A day to celebrate the queen of our hearts 🌸</p>
 
     <p class="message">
-      To the most loving, selfless, and beautiful woman — you are our heart.  
-      Your smile lights up our days, your laughter fills our hearts,  
-      and your love holds our family together.  
-      You deserve the peace, joy, and beauty you’ve given us all. 💚
+      You are the light that never fades, the warmth that never leaves.  
+      Your love is endless, your heart is home, and your strength inspires us daily.  
+      You are beauty, grace, and love wrapped in one amazing soul. 💚  
     </p>
 
     <div class="solo-photo">
-      <h2>🌸 Just You 🌸</h2>
+      <h2>🌷 Just You 🌷</h2>
       <img src="img6.jpg" alt="Mum's photo" />
+      <p class="photo-caption">The heart of our family 💚</p>
     </div>
 
     <div class="gallery">
-      <h2>💚 Family Moments 💚</h2>
+      <h2>🌿 Family Moments 🌿</h2>
       <div class="photo-grid">
         <img src="img1.jpg" alt="Mum and Precious" />
         <img src="img2.jpg" alt="Mum and siblings 1" />
@@ -41,23 +48,28 @@
     <div class="affirmations">
       <h2>💫 From Our Hearts 💫</h2>
       <ul>
-        <li>You are love in its purest form.</li>
-        <li>Your strength keeps us standing tall.</li>
-        <li>Your wisdom guides us every day.</li>
-        <li>Your laughter makes our home feel alive.</li>
-        <li>We are proud to be your children, Mum. 💚</li>
+        <li>You are love in its purest form 💚</li>
+        <li>Your laughter makes our world brighter 🌞</li>
+        <li>Your hugs are the safest place on earth 🤗</li>
+        <li>Your wisdom guides our every step 🌿</li>
+        <li>We love you more than words can ever say 💚</li>
       </ul>
+    </div>
+
+    <div class="surprise">
+      <button onclick="showSurprise()">Click for a surprise 💚</button>
+      <p id="surprise-text" class="hidden">You’re not just our mother, you’re our greatest blessing 💫💚</p>
     </div>
 
     <p class="footer">With all our love, <span>Precious & Family 💚</span></p>
   </div>
 
-  <div class="hearts">
-    <span>💚</span>
-    <span>💚</span>
-    <span>💚</span>
-    <span>💚</span>
-    <span>💚</span>
-  </div>
+  <script>
+    function showSurprise() {
+      const text = document.getElementById('surprise-text');
+      text.classList.toggle('hidden');
+      text.classList.toggle('fade-in');
+    }
+  </script>
 </body>
 </html>
