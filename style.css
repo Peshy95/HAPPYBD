@@ -1,142 +1,108 @@
 body {
   margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #c8f7c5, #e9fff2);
+  color: #1f5126;
   text-align: center;
-  color: #1b5e20;
   overflow-x: hidden;
 }
 
 .container {
-  padding: 30px;
+  padding: 20px;
   max-width: 900px;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 128, 0, 0.2);
-  animation: fadeIn 2s ease-in-out;
 }
 
 .title {
-  font-size: 2.8rem;
-  color: #2e7d32;
-  text-shadow: 0 0 10px #a5d6a7;
-  animation: glow 2s infinite alternate;
-}
-
-.subtitle {
-  font-size: 1.3rem;
-  color: #388e3c;
-  margin-bottom: 20px;
+  font-size: 2.8em;
+  color: #1a4d2e;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in;
 }
 
 .message {
-  font-size: 1.1rem;
-  margin: 20px 0;
+  font-size: 1.2em;
   line-height: 1.8;
-  animation: fadeInUp 3s ease-in-out;
+  margin: 20px 0;
 }
 
-img {
-  width: 100%;
+.solo-photo img {
+  width: 80%;
+  max-width: 300px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.3);
-  transition: transform 0.5s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 3s ease-in-out;
 }
 
-img:hover {
-  transform: scale(1.05);
+.caption {
+  font-style: italic;
+  color: #2e7d32;
+  margin-top: 10px;
+}
+
+.gallery {
+  margin-top: 30px;
 }
 
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
+  margin-top: 10px;
+}
+
+.photo-grid img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
 }
 
 .affirmations ul {
   list-style: none;
   padding: 0;
-  font-size: 1.1rem;
-  line-height: 2;
+  font-size: 1.1em;
+  margin-top: 20px;
 }
 
 .affirmations li {
-  background: rgba(76, 175, 80, 0.1);
   margin: 10px 0;
-  padding: 10px;
-  border-radius: 12px;
-  transition: background 0.3s;
-}
-
-.affirmations li:hover {
-  background: rgba(76, 175, 80, 0.3);
+  animation: fadeUp 2s ease-in;
 }
 
 .footer {
   margin-top: 30px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1em;
 }
 
-.floating-hearts {
+.hearts {
   position: fixed;
-  top: 10px;
-  left: 0;
+  bottom: 10px;
   width: 100%;
-  animation: float 4s infinite linear;
-  font-size: 1.5rem;
+  text-align: center;
+  animation: floatHearts 5s infinite linear;
 }
 
-.surprise button {
-  background: #388e3c;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background 0.3s;
-}
-
-.surprise button:hover {
-  background: #2e7d32;
-}
-
-#surprise-text {
-  font-size: 1.3rem;
-  margin-top: 15px;
-  color: #1b5e20;
-  font-weight: 600;
-}
-
-.hidden {
-  display: none;
-}
-
-.fade-in {
-  animation: fadeInUp 2s ease forwards;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes glow {
-  from { text-shadow: 0 0 10px #a5d6a7; }
-  to { text-shadow: 0 0 25px #81c784, 0 0 40px #66bb6a; }
-}
-
-@keyframes float {
+@keyframes floatHearts {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
