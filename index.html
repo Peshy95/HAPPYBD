@@ -15,17 +15,14 @@
       You are the heart of our family and the reason we smile every day. 🌿💚
     </p>
 
-    <!-- Music Play Button -->
+    <!-- Play button -->
     <button class="play-btn" onclick="playMusic()">🎵 Play Music</button>
 
-    <!-- YouTube Music -->
-    <div id="music-player" style="display: none;">
-      <iframe width="0" height="0"
-        src="https://www.youtube.com/embed/U0pldfTvB3c?autoplay=1&loop=1&playlist=U0pldfTvB3c"
-        frameborder="0"
-        allow="autoplay; encrypted-media">
-      </iframe>
-    </div>
+    <!-- Music file -->
+    <audio id="bg-music" loop>
+      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Dolly_Parton/Unknown/Dolly_Parton_-_Someone_I_Used_To_Know.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
     <div class="solo-photo">
       <img src="img4.jpg" alt="Mum" />
@@ -48,14 +45,14 @@
         <li>You are our safe place.</li>
         <li>Your smile makes everything better.</li>
         <li>Your strength inspires us daily.</li>
-        <li>We’re lucky to call you “Mum.” 💚</li>
+        <li>We’re lucky to call you “Mum.💚</li>
       </ul>
     </div>
 
     <p class="footer">
-      Proverbs 31:25–26 — “She is clothed with strength and dignity;  
+      Proverbs 31:25–26 — She is clothed with strength and dignity;  
       she can laugh at the days to come.  
-      She speaks with wisdom, and faithful instruction is on her tongue.”  
+      She speaks with wisdom, and faithful instruction is on her tongue. 
       <br><br>
       <span>LOVE YOU ALWAYS 💚</span>
     </p>
@@ -68,7 +65,8 @@
 
   <script>
     function playMusic() {
-      document.getElementById("music-player").style.display = "block";
+      const music = document.getElementById("bg-music");
+      music.play();
       document.querySelector(".play-btn").style.display = "none";
     }
   </script>
