@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <audio id="bg-music" loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Dolly_Parton/Unknown/Dolly_Parton_-_Someone_I_Used_To_Know.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="tap-message" class="tap-message">
+    💚 Tap anywhere to start the music 💚
+  </div>
+
   <div class="container">
     <h1 class="title">💚 Happy Birthday Mum 💚</h1>
 
@@ -14,15 +23,6 @@
       Thank you for your endless love, your strength, and your kindness.  
       You are the heart of our family and the reason we smile every day. 🌿💚
     </p>
-
-    <!-- Play button -->
-    <button class="play-btn" onclick="playMusic()">🎵 Play Music</button>
-
-    <!-- Music file -->
-    <audio id="bg-music" loop>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Dolly_Parton/Unknown/Dolly_Parton_-_Someone_I_Used_To_Know.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
 
     <div class="solo-photo">
       <img src="img4.jpg" alt="Mum" />
@@ -45,14 +45,14 @@
         <li>You are our safe place.</li>
         <li>Your smile makes everything better.</li>
         <li>Your strength inspires us daily.</li>
-        <li>We’re lucky to call you “Mum.💚</li>
+        <li>We’re lucky to call you “Mum.” 💚</li>
       </ul>
     </div>
 
     <p class="footer">
-      Proverbs 31:25–26 — She is clothed with strength and dignity;  
+      Proverbs 31:25–26 — “She is clothed with strength and dignity;  
       she can laugh at the days to come.  
-      She speaks with wisdom, and faithful instruction is on her tongue. 
+      She speaks with wisdom, and faithful instruction is on her tongue.”  
       <br><br>
       <span>LOVE YOU ALWAYS 💚</span>
     </p>
@@ -64,11 +64,10 @@
   </div>
 
   <script>
-    function playMusic() {
-      const music = document.getElementById("bg-music");
-      music.play();
-      document.querySelector(".play-btn").style.display = "none";
-    }
+    const music = document.getElementById("bg-music");
+    const tapMessage = document.getElementById("tap-message");
+
+   
   </script>
 </body>
 </html>

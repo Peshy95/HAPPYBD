@@ -75,25 +75,22 @@ img:hover {
   to { transform: translateY(-800px); opacity: 0; }
 }
 
-.play-btn {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 1.1em;
-  cursor: pointer;
-  margin-top: 20px;
-  box-shadow: 0 4px 10px rgba(0, 100, 0, 0.3);
-  transition: background 0.3s, transform 0.3s;
-}
-
-.play-btn:hover {
-  background: #43a047;
-  transform: scale(1.05);
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.tap-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 100, 0, 0.9);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  display: none;
+  z-index: 1000;
+  animation: fadeIn 1s ease-in;
 }
