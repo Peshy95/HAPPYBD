@@ -1,108 +1,99 @@
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #c8f7c5, #e9fff2);
-  color: #1f5126;
+  background: linear-gradient(to bottom right, #e6ffe6, #ccffcc);
   text-align: center;
+  color: #1b5e20;
   overflow-x: hidden;
 }
 
 .container {
   padding: 20px;
-  max-width: 900px;
-  margin: auto;
 }
 
 .title {
-  font-size: 2.8em;
-  color: #1a4d2e;
+  font-size: 2em;
   margin-top: 20px;
+  color: #0a4d02;
   animation: fadeIn 2s ease-in;
 }
 
 .message {
   font-size: 1.2em;
-  line-height: 1.8;
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 500px;
+  line-height: 1.6;
 }
 
-.solo-photo img {
-  width: 80%;
-  max-width: 300px;
+img {
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  animation: fadeIn 3s ease-in-out;
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 100, 0, 0.3);
+  transition: transform 0.3s;
 }
 
-.caption {
-  font-style: italic;
-  color: #2e7d32;
-  margin-top: 10px;
-}
-
-.gallery {
-  margin-top: 30px;
+img:hover {
+  transform: scale(1.05);
 }
 
 .photo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.photo-grid img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.photo-grid img:hover {
-  transform: scale(1.05);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .affirmations ul {
   list-style: none;
   padding: 0;
-  font-size: 1.1em;
-  margin-top: 20px;
 }
 
 .affirmations li {
-  margin: 10px 0;
-  animation: fadeUp 2s ease-in;
+  background: #a5d6a7;
+  margin: 8px auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  font-weight: 500;
 }
 
 .footer {
   margin-top: 30px;
-  font-weight: bold;
-  font-size: 1.1em;
+  font-style: italic;
+  font-size: 1em;
+  color: #0a3d02;
 }
 
-.hearts {
+.hearts span {
   position: fixed;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  animation: floatHearts 5s infinite linear;
+  animation: float 6s linear infinite;
+  bottom: -20px;
 }
 
-@keyframes floatHearts {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+@keyframes float {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-800px); opacity: 0; }
+}
+
+.play-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 100, 0, 0.3);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.play-btn:hover {
+  background: #43a047;
+  transform: scale(1.05);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
